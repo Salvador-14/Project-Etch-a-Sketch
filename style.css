@@ -1,0 +1,24 @@
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+.gridsContainer {
+  width: 512px;
+  height: 512px;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+.gridsContainer div {
+  box-sizing: border-box;
+  margin: 0;
+  border: 1px solid black;
+}
+
+button {
+  order: 1;
+}
