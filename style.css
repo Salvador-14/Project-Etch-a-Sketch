@@ -21,4 +21,7 @@ body {
 
 button {
   order: 1;
+  border-radius: 7px;
+  padding: 9px;
+  border: double white;
 }

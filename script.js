@@ -7,13 +7,17 @@ function createGrid(squaresNumber = 16) {
   const gridsContainer = document.createElement("div");
   gridsContainer.classList.add("gridsContainer");
   document.body.appendChild(gridsContainer);
+
   
   for (i = 1; i <= squaresNumber; i++) {
     const div = document.createElement("div");
     div.style.cssText = `width: ${newSize}; height: ${newSize}`;
 
     gridsContainer.appendChild(div);
-    div.addEventListener("mouseover", () => div.style.backgroundColor = "black");
+    div.addEventListener("mouseover", () => {
+      
+      div.style.backgroundColor = getRandomColor()
+    });
     
   }
 }
@@ -34,3 +38,12 @@ btn.addEventListener("click", () => {
     createGrid(newValue);
   }
 });
+
+function getRandomColor() { 
+  const hex = '0123456789ABCDEF'; 
+  let rgbColor = '#';
+  for (let i = 0; i < 6; i++) { 
+      rgbColor += hex[Math.floor(Math.random() * 16)]; 
+  } 
+  return rgbColor; 
+} 
